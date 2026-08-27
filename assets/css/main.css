@@ -223,6 +223,61 @@ footer.site a { color: var(--ink-soft); }
   text-align: center;
 }
 
+/* ---------- pager ---------- */
+
+.pager-summary {
+  text-align: center;
+  color: var(--ink-soft);
+  font-size: 0.82rem;
+  margin: -1.25rem 0 1rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.pager {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.35rem;
+  margin-bottom: 2.5rem;
+}
+
+.pager[hidden] { display: none; }
+
+.pager-btn {
+  min-width: 2.2rem;
+  padding: 0.45rem 0.6rem;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--ink);
+  font-family: inherit;
+  font-size: 0.88rem;
+  font-variant-numeric: tabular-nums;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s, color 0.15s;
+}
+
+.pager-btn:hover:not(:disabled) { border-color: var(--accent); }
+
+.pager-btn:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.pager-btn.current {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+  font-weight: 600;
+}
+
+.pager-gap {
+  color: var(--ink-soft);
+  padding: 0 0.15rem;
+  user-select: none;
+}
+
 /* ---------- request box ---------- */
 
 .request-box {

@@ -24,6 +24,10 @@
 
 <p class="empty-note" id="empty-note" hidden>일치하는 단어가 없어요. 아래에서 새 단어를 요청해 보세요.</p>
 
+{{/* 페이징은 filter.js가 채운다. JS가 없으면 카드 전체가 그대로 보인다. */}}
+<p class="pager-summary" id="pager-summary"></p>
+<nav class="pager" id="pager" aria-label="페이지 넘기기" hidden></nav>
+
 <div class="request-box">
   <a class="btn" href="https://github.com/{{ .Site.Params.repo }}/issues/new?template=word-request.yml">새 단어 요청하기</a>
   <p>GitHub 이슈로 단어를 요청하면 자동으로 어원 분석이 추가돼요.</p>
