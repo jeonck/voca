@@ -1,5 +1,6 @@
 ---
 title: "hydrogen"
+date: 2026-08-27T19:05:15+00:00
 korean: "수소"
 formula: "hydro-(물) + -gen(낳는 것)"
 roots:

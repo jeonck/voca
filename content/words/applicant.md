@@ -1,5 +1,6 @@
 ---
 title: "applicant"
+date: 2026-08-27T16:09:51+00:00
 korean: "지원자"
 formula: "ad-(~쪽으로) + plic-(접다, 포개다) + -ant(지금 그렇게 하고 있는 사람)"
 roots:

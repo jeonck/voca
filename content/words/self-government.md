@@ -1,5 +1,6 @@
 ---
 title: "self-government"
+date: 2026-08-27T19:05:15+00:00
 korean: "자치"
 formula: "self-(스스로) + govern-(배의 키를 잡다) + -ment(하는 것)"
 roots:

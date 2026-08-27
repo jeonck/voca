@@ -1,5 +1,6 @@
 ---
 title: "conduct"
+date: 2026-08-27T19:05:15+00:00
 korean: "전도하다, 이끌다"
 formula: "con-(함께) + duct-(이끌다)"
 roots:

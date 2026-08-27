@@ -1,5 +1,6 @@
 ---
 title: "revert"
+date: 2026-08-27T16:09:51+00:00
 korean: "되돌아가다"
 formula: "re-(다시) + vert-(돌다)"
 roots:

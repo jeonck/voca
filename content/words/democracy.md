@@ -1,5 +1,6 @@
 ---
 title: "democracy"
+date: 2026-08-27T19:05:15+00:00
 korean: "민주주의"
 formula: "demo-(민중, 그 지역 사람들) + -cracy(힘, 쥐고 있는 권력)"
 roots:

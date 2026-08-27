@@ -1,5 +1,6 @@
 ---
 title: "diatomic"
+date: 2026-08-27T19:05:15+00:00
 korean: "이원자의"
 formula: "di-(둘) + a-(없는) + tom-(자르다) + -ic(~한)"
 roots:

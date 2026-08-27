@@ -7,7 +7,7 @@
 <p class="page-lede">이 어근을 공유하는 단어 {{ len .Pages }}개</p>
 
 <div class="card-grid">
-  {{ range sort .Pages "Title" }}
+  {{ range sort (sort .Pages "Title") "Date" "desc" }}
     {{ partial "word-card.html" . }}
   {{ end }}
 </div>

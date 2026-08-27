@@ -1,5 +1,6 @@
 {{ define "main" }}
-{{ $words := sort (where .Site.RegularPages "Section" "words") "Title" }}
+{{/* 기본 정렬: 입력 날짜 내림차순(최근 추가 순). 같은 날짜끼리는 알파벳 순. */}}
+{{ $words := sort (sort (where .Site.RegularPages "Section" "words") "Title") "Date" "desc" }}
 
 <div class="search-row">
   <input id="search" type="search" autocomplete="off"

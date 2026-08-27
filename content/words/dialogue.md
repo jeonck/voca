@@ -1,5 +1,6 @@
 ---
 title: "dialogue"
+date: 2026-08-27T16:09:51+00:00
 korean: "대화"
 formula: "dia-(사이를 가로질러) + log-(말)"
 roots:

@@ -1,5 +1,6 @@
 ---
 title: "interrupt"
+date: 2026-08-27T16:09:51+00:00
 korean: "방해하다, 중단시키다"
 formula: "inter-(사이를) + rupt-(깨다)"
 roots:

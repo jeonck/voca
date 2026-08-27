@@ -1,5 +1,6 @@
 ---
 title: "compound"
+date: 2026-08-27T19:05:15+00:00
 korean: "화합물"
 formula: "com-(함께) + -pound(pon-, 놓다)"
 roots:

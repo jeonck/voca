@@ -1,5 +1,6 @@
 ---
 title: "transport"
+date: 2026-08-27T16:09:51+00:00
 korean: "운송하다, 수송"
 formula: "trans-(가로질러) + port-(나르다)"
 roots:

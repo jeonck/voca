@@ -1,5 +1,6 @@
 ---
 title: "molecule"
+date: 2026-08-27T19:05:15+00:00
 korean: "분자"
 formula: "mol-(덩어리) + -cule(아주 작은)"
 roots:

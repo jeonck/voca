@@ -1,5 +1,6 @@
 ---
 title: "occur"
+date: 2026-08-27T16:09:51+00:00
 korean: "발생하다"
 formula: "oc-(ob-, ~을 향해) + cur-(달리다)"
 roots:

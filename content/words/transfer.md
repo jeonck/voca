@@ -1,5 +1,6 @@
 ---
 title: "transfer"
+date: 2026-08-27T16:09:51+00:00
 korean: "옮기다, 이체하다"
 formula: "trans-(가로질러) + fer-(나르다)"
 roots:

@@ -67,7 +67,7 @@ jobs:
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           claude_args: |
-            --allowedTools "Read,Write,Edit,Glob,Bash(git *),Bash(gh *),Bash(hugo *),Bash(ls *)"
+            --allowedTools "Read,Write,Edit,Glob,Bash(git *),Bash(gh *),Bash(hugo *),Bash(ls *),Bash(date *)"
           prompt: |
             너는 Hugo로 만든 "voca" 저장소에 새 영어 단어의 어원 설명을 추가하는 작업을 자동으로 수행한다.
 
@@ -84,6 +84,7 @@ jobs:
 
                ---
                title: "<영어 단어>"
+               date: <추가 시각. `date -u +%Y-%m-%dT%H:%M:%S+00:00` 로 지금 시각을 구해 그대로 넣어라>
                korean: "<짧은 한국어 뜻>"
                formula: "<예: ad-(~쪽으로) + plic-(접다, 포개다) + -ant(지금 그렇게 하고 있는 사람)>"
                roots:
@@ -105,6 +106,7 @@ jobs:
                  어근의 물리적 동작을 구체적 장면으로 그리고, 사전적 번역은 마지막에 상대화한다.
                - family는 3~5개.
                - `roots` 는 반드시 소문자 한 개만. 기존 어근과 겹치면 자동으로 함께 묶여 표시된다.
+               - `date` 는 목록 정렬(최근 추가 순 내림차순)에 쓰이므로 반드시 넣어야 한다. 빼먹으면 목록 맨 뒤로 밀린다.
                - YAML 문자열 안의 큰따옴표는 `\"` 로 이스케이프해라.
                - 사실관계(라틴어/그리스어 어원)가 불확실하면 확실한 범위에서만 서술하고 과장하지 마라.
             3. `hugo --gc --minify` 를 실행해서 빌드가 성공하는지 반드시 확인해라.

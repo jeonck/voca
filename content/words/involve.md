@@ -1,5 +1,6 @@
 ---
 title: "involve"
+date: 2026-08-27T16:09:51+00:00
 korean: "관련시키다, 수반하다"
 formula: "in-(안으로) + volv-(말다, 감다)"
 roots:

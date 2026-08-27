@@ -6,8 +6,11 @@
 </nav>
 
 <article class="detail">
-  <span class="detail-root">
-    <a href="{{ (printf "/roots/%s/" (urlize $root)) | relURL }}">{{ $root }}-</a>
+  <span class="detail-head">
+    <span class="detail-root">
+      <a href="{{ (printf "/roots/%s/" (urlize $root)) | relURL }}">{{ $root }}-</a>
+    </span>
+    <time class="detail-date" datetime="{{ .Date.Format "2006-01-02" }}">추가 {{ .Date.Format "2006.01.02" }}</time>
   </span>
   <h1 class="detail-title">{{ .Title }}</h1>
   <p class="detail-korean">{{ .Params.korean }}</p>

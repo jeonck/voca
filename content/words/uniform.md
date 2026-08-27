@@ -1,5 +1,6 @@
 ---
 title: "uniform"
+date: 2026-08-27T19:05:15+00:00
 korean: "균일한, 획일적인"
 formula: "uni-(하나) + form-(형태, 모양)"
 roots:

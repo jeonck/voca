@@ -1,5 +1,6 @@
 ---
 title: "audience"
+date: 2026-08-27T16:25:00+00:00
 korean: "청중, 관객"
 formula: "audi-(듣다) + -ence(그렇게 하고 있는 상태/그런 사람들)"
 roots:

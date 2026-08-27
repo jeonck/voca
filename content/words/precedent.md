@@ -1,5 +1,6 @@
 ---
 title: "precedent"
+date: 2026-08-27T19:05:15+00:00
 korean: "선례"
 formula: "pre-(먼저) + ced-(가다, 발을 옮기다) + -ent(그런 것)"
 roots:

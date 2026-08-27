@@ -1,5 +1,6 @@
 ---
 title: "inspect"
+date: 2026-08-27T16:09:51+00:00
 korean: "점검하다"
 formula: "in-(안을) + spect-(보다)"
 roots:

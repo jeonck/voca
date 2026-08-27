@@ -1,5 +1,6 @@
 ---
 title: "symphony"
+date: 2026-08-27T16:09:51+00:00
 korean: "교향곡, 조화"
 formula: "sym-(함께) + phon-(소리)"
 roots:

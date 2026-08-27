@@ -1,5 +1,6 @@
 ---
 title: "semiconductor"
+date: 2026-08-27T19:05:15+00:00
 korean: "반도체"
 formula: "semi-(반, 절반) + con-(함께) + duct-(이끌다) + -or(그러는 것)"
 roots:

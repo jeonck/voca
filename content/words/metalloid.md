@@ -1,5 +1,6 @@
 ---
 title: "metalloid"
+date: 2026-08-27T19:05:15+00:00
 korean: "준금속"
 formula: "metal-(캐낸 것) + -oid(~처럼 생긴)"
 roots:

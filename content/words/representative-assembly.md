@@ -1,5 +1,6 @@
 ---
 title: "representative assembly"
+date: 2026-08-27T19:05:15+00:00
 korean: "대의 기관, 대의회"
 formula: "re-(다시) + present-(앞에 있게 하다) + -ative(하는) · as-(ad-, ~쪽으로) + sembl-(한데, 함께) + -y(하는 것)"
 roots:

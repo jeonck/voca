@@ -1,5 +1,6 @@
 ---
 title: "brittle"
+date: 2026-08-27T19:05:15+00:00
 korean: "부서지기 쉬운"
 formula: "breot-(깨지다, 부서지다) + -le(쉽게 그렇게 되는) — 고대영어 계열"
 roots:

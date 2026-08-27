@@ -1,5 +1,6 @@
 ---
 title: "describe"
+date: 2026-08-27T16:09:51+00:00
 korean: "묘사하다"
 formula: "de-(아래로, 완전히) + scrib-(쓰다)"
 roots:

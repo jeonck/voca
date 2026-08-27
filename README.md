@@ -38,6 +38,7 @@ static/CNAME                 커스텀 도메인
 ```yaml
 ---
 title: "applicant"
+date: 2026-08-27T16:09:51+00:00   # 입력 날짜. 목록 정렬 기준이라 반드시 필요합니다.
 korean: "지원자"
 formula: "ad-(~쪽으로) + plic-(접다, 포개다) + -ant(지금 그렇게 하고 있는 사람)"
 roots:
@@ -55,6 +56,15 @@ bridge: "선택 — 두 단어가 어원상 짝을 이루는 통찰이 있을 �
 
 `roots` 값이 겹치는 단어들은 자동으로 `/roots/<어근>/` 페이지에 모이고, 각 단어 상세 페이지
 하단에 "같은 어근을 공유하는 단어" 카드로 나타납니다.
+
+### 정렬
+
+목록(홈 · 전체 단어 · 어근별 페이지)의 기본 정렬은 **입력 날짜 내림차순**, 즉 최근에 추가한
+단어가 앞에 옵니다. 같은 날짜끼리는 알파벳순으로 놓입니다(Hugo의 `sort`가 안정 정렬이라
+`sort (sort .Pages "Title") "Date" "desc"` 로 두 단계 정렬이 유지됩니다).
+
+오름차순으로 바꾸려면 세 템플릿(`layouts/index.html`, `layouts/words/list.html`,
+`layouts/_default/term.html`)의 `"desc"` 를 `"asc"` 로 바꾸면 됩니다.
 
 ### 마크다운 주의점
 

@@ -162,6 +162,21 @@ footer.site a { color: var(--ink-soft); }
 
 .card[hidden] { display: none; }
 
+.card-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.card-date {
+  font-size: 0.7rem;
+  color: var(--ink-soft);
+  opacity: 0.65;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
 .card-root {
   font-family: var(--serif);
   font-size: 0.78rem;
@@ -233,6 +248,21 @@ footer.site a { color: var(--ink-soft); }
 }
 
 .crumbs a { text-decoration: none; }
+
+.detail-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.detail-date {
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  opacity: 0.7;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
 
 .detail-root {
   font-family: var(--serif);
