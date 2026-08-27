@@ -14,7 +14,9 @@
   var pager = document.getElementById("pager");
   var summary = document.getElementById("pager-summary");
 
-  if (!search || !chipBox || !grid) return;
+  // chipBox 는 없을 수 있다(묶인 어근이 없으면 칩 자체를 렌더링하지 않음).
+  // 그 경우에도 검색과 페이징은 그대로 동작해야 한다.
+  if (!search || !grid) return;
 
   var cards = Array.prototype.slice.call(grid.querySelectorAll(".card"));
   var state = { q: "", root: "", page: 1 };
@@ -126,7 +128,7 @@
     resetToFirstPage();
   });
 
-  chipBox.addEventListener("click", function (e) {
+  if (chipBox) chipBox.addEventListener("click", function (e) {
     var chip = e.target.closest(".chip");
     if (!chip) return;
 

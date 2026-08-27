@@ -16,7 +16,7 @@ hugo.toml                    Hugo 설정 (baseURL, roots 분류 체계)
 content/words/<word>.md      단어 한 개 = 파일 한 개 (아래 스키마)
 layouts/
   _default/baseof.html       공통 뼈대
-  index.html                 홈 — 검색 + 어근 칩 + 카드 그리드 + 어근 목록 링크
+  index.html                 홈 — 검색 + 어근 칩(2개 이상 묶인 것만) + 카드 그리드 + 어근 목록 링크
   words/single.html          단어 상세 페이지
   words/list.html            전체 단어 목록
   _default/term.html         특정 어근을 공유하는 단어들
@@ -66,6 +66,15 @@ bridge: "선택 — 두 단어가 어원상 짝을 이루는 통찰이 있을 �
 
 오름차순으로 바꾸려면 세 템플릿(`layouts/index.html`, `layouts/words/list.html`,
 `layouts/_default/term.html`)의 `"desc"` 를 `"asc"` 로 바꾸면 됩니다.
+
+### 어근 칩
+
+홈의 어근 칩은 **단어가 2개 이상 묶인 어근만** 보여줍니다. 어근 대부분은 아직 단어가 하나뿐이라
+전부 늘어놓으면 정작 묶인 어근이 파묻히기 때문입니다. 나머지 어근은 `/roots/` 목록에서 볼 수 있고,
+칩에 없는 어근도 검색창에서는 그대로 찾을 수 있습니다(`formula` 문자열까지 검색 대상).
+
+묶인 어근이 하나도 없으면 칩 영역 자체가 렌더링되지 않습니다. 이때도 검색과 페이징은 그대로
+동작하도록 `filter.js`가 칩 영역의 부재를 허용합니다.
 
 ### 페이징
 

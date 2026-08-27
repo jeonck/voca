@@ -139,6 +139,11 @@ footer.site a { color: var(--ink-soft); }
   font-size: 0.88rem;
 }
 
+.roots-note {
+  color: var(--ink-soft);
+  opacity: 0.8;
+}
+
 .roots-link a {
   text-decoration: none;
   border-bottom: 1px solid transparent;
