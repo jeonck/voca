@@ -1,0 +1,4 @@
+# Hugo 빌드 산출물
+/public/
+/resources/
+.hugo_build.lock

@@ -1,0 +1,33 @@
+{{ define "main" }}
+{{ $words := sort (where .Site.RegularPages "Section" "words") "Title" }}
+
+<div class="search-row">
+  <input id="search" type="search" autocomplete="off"
+         placeholder="단어, 뜻, 어근으로 검색 (예: applicant, plic, 던지다)" />
+</div>
+
+<div class="chips" id="root-chips">
+  <button class="chip active" data-root="">전체</button>
+  {{/* data-root 은 카드의 data-root(front matter 원문)와 정확히 일치해야 한다. */}}
+  {{ range .Site.Taxonomies.roots.ByCount }}
+    {{ $term := .Page.Data.Term }}
+    <button class="chip" data-root="{{ $term }}">{{ $term }}- <span class="chip-count">{{ .Count }}</span></button>
+  {{ end }}
+</div>
+
+<div class="card-grid" id="card-grid">
+  {{ range $words }}
+    {{ partial "word-card.html" . }}
+  {{ end }}
+</div>
+
+<p class="empty-note" id="empty-note" hidden>일치하는 단어가 없어요. 아래에서 새 단어를 요청해 보세요.</p>
+
+<div class="request-box">
+  <a class="btn" href="https://github.com/{{ .Site.Params.repo }}/issues/new?template=word-request.yml">새 단어 요청하기</a>
+  <p>GitHub 이슈로 단어를 요청하면 자동으로 어원 분석이 추가돼요.</p>
+</div>
+
+{{ $js := resources.Get "js/filter.js" | resources.Minify | resources.Fingerprint }}
+<script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
+{{ end }}

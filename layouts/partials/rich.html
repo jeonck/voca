@@ -1,0 +1,14 @@
+{{- /*
+  본문 조각을 렌더링한다.
+
+  **어근-** 처럼 볼드 안쪽이 하이픈으로 끝나고 곧바로 한글이 이어지는 표기가
+  본문에 자주 등장하는데, CommonMark의 flanking 규칙상 이때 닫는 ** 가
+  강조 종료로 인정되지 않아 리터럴 그대로 남는다. 그래서 마크다운에 넘기기 전에
+  볼드만 먼저 <strong> 으로 치환한다. (hugo.toml 에서 unsafe=true 이므로 통과된다.)
+
+  인자: page(필수), text(필수), display("inline" 기본 / "block")
+*/ -}}
+{{- $text := .text -}}
+{{- $display := .display | default "inline" -}}
+{{- $text = replaceRE `\*\*(.+?)\*\*` "<strong>$1</strong>" $text -}}
+{{- .page.RenderString (dict "display" $display) $text -}}

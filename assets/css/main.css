@@ -7,8 +7,8 @@
   --accent-soft: #f1e2d6;
   --line: #e8ddce;
   --scene-bg: #fbf1e4;
-  --serif: "Noto Serif KR", "Georgia", serif;
-  --sans: "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+  --serif: "Noto Serif KR", Georgia, serif;
+  --sans: Pretendard, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
   --radius: 14px;
 }
 
@@ -43,21 +43,26 @@ body {
 
 a { color: var(--accent); }
 
+/* ---------- header / footer ---------- */
+
 header.site {
   padding: 2.5rem 1.5rem 1.5rem;
   text-align: center;
   border-bottom: 1px solid var(--line);
 }
 
-header.site h1 {
+.site-title {
+  display: inline-block;
   font-family: var(--serif);
   font-size: clamp(1.6rem, 4vw, 2.2rem);
-  margin: 0 0 0.4rem;
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: none;
   letter-spacing: -0.01em;
 }
 
-header.site p {
-  margin: 0;
+.site-tagline {
+  margin: 0.4rem 0 0;
   color: var(--ink-soft);
   font-size: 0.95rem;
 }
@@ -65,25 +70,34 @@ header.site p {
 main {
   flex: 1;
   width: 100%;
-  max-width: 760px;
+  max-width: 880px;
   margin: 0 auto;
   padding: 1.5rem 1.25rem 4rem;
 }
 
-.search-row {
-  display: flex;
-  gap: 0.5rem;
-  margin-bottom: 1.25rem;
+footer.site {
+  text-align: center;
+  padding: 2rem 1rem 3rem;
+  color: var(--ink-soft);
+  font-size: 0.82rem;
+  border-top: 1px solid var(--line);
 }
 
+footer.site a { color: var(--ink-soft); }
+
+/* ---------- search + filter ---------- */
+
+.search-row { margin-bottom: 1.25rem; }
+
 .search-row input {
-  flex: 1;
+  width: 100%;
   padding: 0.85rem 1rem;
   border-radius: var(--radius);
   border: 1px solid var(--line);
   background: var(--surface);
   color: var(--ink);
   font-size: 1rem;
+  font-family: inherit;
 }
 
 .search-row input:focus {
@@ -105,6 +119,7 @@ main {
   background: var(--surface);
   color: var(--ink);
   font-size: 0.88rem;
+  font-family: var(--serif);
   cursor: pointer;
   transition: background 0.15s, color 0.15s, border-color 0.15s;
 }
@@ -117,47 +132,75 @@ main {
   color: #fff;
 }
 
-#word-list {
+.chip-count { opacity: 0.6; font-size: 0.8em; }
+
+/* ---------- card grid ---------- */
+
+.card-grid {
   display: grid;
-  gap: 0.65rem;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 0.85rem;
   margin-bottom: 2.5rem;
 }
 
-.word-card {
-  text-align: left;
-  width: 100%;
-  padding: 1rem 1.15rem;
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.1rem 1.2rem 1.2rem;
   border-radius: var(--radius);
   border: 1px solid var(--line);
   background: var(--surface);
-  cursor: pointer;
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 1rem;
-  font-family: inherit;
+  text-decoration: none;
   color: var(--ink);
+  transition: border-color 0.15s, transform 0.15s;
 }
 
-.word-card:hover { border-color: var(--accent); }
+.card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
 
-.word-card .w {
+.card[hidden] { display: none; }
+
+.card-root {
   font-family: var(--serif);
-  font-size: 1.15rem;
-  font-weight: 600;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.02em;
 }
 
-.word-card .k {
+.card-word {
+  font-family: var(--serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0.35rem 0 0.15rem;
+  line-height: 1.2;
+}
+
+.card-korean {
+  margin: 0 0 0.6rem;
   color: var(--ink-soft);
   font-size: 0.9rem;
-  white-space: nowrap;
+}
+
+.card-formula {
+  margin: auto 0 0;
+  padding-top: 0.6rem;
+  border-top: 1px dashed var(--line);
+  font-size: 0.78rem;
+  line-height: 1.55;
+  color: var(--ink-soft);
 }
 
 .empty-note {
   color: var(--ink-soft);
-  font-size: 0.9rem;
-  padding: 1rem 0.2rem;
+  font-size: 0.92rem;
+  padding: 1.5rem 0.2rem;
+  text-align: center;
 }
+
+/* ---------- request box ---------- */
 
 .request-box {
   border-top: 1px solid var(--line);
@@ -168,7 +211,7 @@ main {
 .request-box p {
   color: var(--ink-soft);
   font-size: 0.9rem;
-  margin: 0.5rem 0 0;
+  margin: 0.6rem 0 0;
 }
 
 .btn {
@@ -182,47 +225,45 @@ main {
   font-weight: 600;
 }
 
-/* detail view */
+/* ---------- detail page ---------- */
 
-.detail {
-  display: none;
+.crumbs {
+  margin-bottom: 1.25rem;
+  font-size: 0.92rem;
 }
 
-.detail.active {
-  display: block;
+.crumbs a { text-decoration: none; }
+
+.detail-root {
+  font-family: var(--serif);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
 }
 
-.back-btn {
-  background: none;
-  border: none;
-  color: var(--accent);
-  font-size: 0.95rem;
-  cursor: pointer;
-  padding: 0.5rem 0;
-  margin-bottom: 1rem;
-}
+.detail-root a { text-decoration: none; }
 
 .detail-title {
   font-family: var(--serif);
-  font-size: clamp(1.8rem, 5vw, 2.4rem);
-  margin: 0 0 0.2rem;
+  font-size: clamp(1.9rem, 5vw, 2.5rem);
+  margin: 0.3rem 0 0.2rem;
+  line-height: 1.15;
 }
 
 .detail-korean {
   color: var(--ink-soft);
   font-size: 1.05rem;
-  margin: 0 0 1rem;
+  margin: 0 0 1.25rem;
 }
 
 .formula {
-  display: inline-block;
   background: var(--accent-soft);
   border-radius: 10px;
-  padding: 0.75rem 1rem;
+  padding: 0.85rem 1.1rem;
   font-family: var(--serif);
   font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
+  line-height: 1.7;
+  margin: 0 0 1.75rem;
 }
 
 .detail p {
@@ -234,28 +275,30 @@ main {
   background: var(--scene-bg);
   border-left: 3px solid var(--accent);
   border-radius: 0 10px 10px 0;
-  padding: 1.1rem 1.25rem;
-  margin: 1.5rem 0;
+  padding: 1.1rem 1.3rem;
+  margin: 1.75rem 0;
 }
 
 .scene-box .label {
   display: block;
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   color: var(--accent);
   font-weight: 700;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.03em;
   margin-bottom: 0.5rem;
 }
+
+.scene-box p { margin: 0; }
 
 .closing {
   font-style: italic;
   color: var(--ink-soft);
 }
 
-.family-title {
+.section-title {
   font-family: var(--serif);
-  font-size: 1.1rem;
-  margin: 2rem 0 0.75rem;
+  font-size: 1.15rem;
+  margin: 2.25rem 0 0.85rem;
 }
 
 .family-list {
@@ -271,7 +314,7 @@ main {
   border: 1px solid var(--line);
   border-radius: 10px;
   background: var(--surface);
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 .family-list .fw {
@@ -281,17 +324,56 @@ main {
 }
 
 .bridge {
-  margin-top: 1.5rem;
+  margin-top: 1.75rem;
   padding-top: 1.25rem;
   border-top: 1px dashed var(--line);
   color: var(--ink-soft);
 }
 
-footer.site {
-  text-align: center;
-  padding: 2rem 1rem 3rem;
-  color: var(--ink-soft);
-  font-size: 0.82rem;
+.siblings { margin-top: 3rem; }
+
+/* ---------- taxonomy pages ---------- */
+
+.page-title {
+  font-family: var(--serif);
+  font-size: clamp(1.6rem, 4vw, 2.1rem);
+  margin: 0 0 0.3rem;
 }
 
-footer.site a { color: var(--ink-soft); text-decoration: underline; }
+.page-lede {
+  color: var(--ink-soft);
+  margin: 0 0 1.75rem;
+  font-size: 0.95rem;
+}
+
+.root-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 0.7rem;
+}
+
+.root-card {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface);
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.root-card:hover { border-color: var(--accent); }
+
+.root-name {
+  font-family: var(--serif);
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.root-count {
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+}

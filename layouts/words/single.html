@@ -1,0 +1,65 @@
+{{ define "main" }}
+{{ $root := index .Params.roots 0 }}
+
+<nav class="crumbs">
+  <a href="{{ "/" | relURL }}">← 전체 단어</a>
+</nav>
+
+<article class="detail">
+  <span class="detail-root">
+    <a href="{{ (printf "/roots/%s/" (urlize $root)) | relURL }}">{{ $root }}-</a>
+  </span>
+  <h1 class="detail-title">{{ .Title }}</h1>
+  <p class="detail-korean">{{ .Params.korean }}</p>
+
+  <p class="formula">
+    {{ .Title }}({{ .Params.korean }}) =
+    {{ partial "rich.html" (dict "page" .Page "text" .Params.formula) }}
+  </p>
+
+  {{ range .Params.paragraphs }}
+    {{ partial "rich.html" (dict "page" $.Page "text" . "display" "block") }}
+  {{ end }}
+
+  <section class="scene-box">
+    <span class="label">장면으로 보면</span>
+    <p>{{ partial "rich.html" (dict "page" .Page "text" .Params.scene) }}</p>
+  </section>
+
+  <p class="closing">{{ partial "rich.html" (dict "page" .Page "text" .Params.closing) }}</p>
+
+  {{ with .Params.family }}
+    <h2 class="section-title">같은 뿌리를 가진 친척들</h2>
+    <ul class="family-list">
+      {{ range . }}
+        <li>
+          <span class="fw">{{ .word }}</span>
+          {{ partial "rich.html" (dict "page" $.Page "text" .note) }}
+        </li>
+      {{ end }}
+    </ul>
+  {{ end }}
+
+  {{ with .Params.bridge }}
+    <p class="bridge">{{ partial "rich.html" (dict "page" $.Page "text" .) }}</p>
+  {{ end }}
+</article>
+
+{{/* 같은 어근을 공유하는 다른 단어 카드 */}}
+{{ $siblings := slice }}
+{{ with index .Site.Taxonomies.roots $root }}
+  {{ range .Pages }}
+    {{ if ne .RelPermalink $.RelPermalink }}
+      {{ $siblings = $siblings | append . }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+{{ with $siblings }}
+  <section class="siblings">
+    <h2 class="section-title">{{ $root }}- 어근을 공유하는 단어</h2>
+    <div class="card-grid">
+      {{ range . }}{{ partial "word-card.html" . }}{{ end }}
+    </div>
+  </section>
+{{ end }}
+{{ end }}

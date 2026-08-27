@@ -15,6 +15,9 @@ permissions:
   pull-requests: write
   id-token: write
 
+env:
+  HUGO_VERSION: 0.140.2
+
 jobs:
   generate:
     if: >
@@ -31,6 +34,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Install Hugo
+        run: |
+          curl -sSL -o hugo.deb \
+            "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb"
+          sudo dpkg -i hugo.deb
+          hugo version
 
       - name: Resolve requested word
         id: extract
@@ -57,35 +67,53 @@ jobs:
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           claude_args: |
-            --allowedTools "Read,Write,Edit,Bash(git *),Bash(gh *),Bash(python3 *)"
+            --allowedTools "Read,Write,Edit,Glob,Bash(git *),Bash(gh *),Bash(hugo *),Bash(ls *)"
           prompt: |
-            너는 "voca" 저장소에 새 영어 단어의 어원 설명을 추가하는 작업을 자동으로 수행한다.
+            너는 Hugo로 만든 "voca" 저장소에 새 영어 단어의 어원 설명을 추가하는 작업을 자동으로 수행한다.
 
             요청된 단어: "${{ steps.extract.outputs.word }}"
-            관련 이슈 번호: ${{ steps.extract.outputs.issue_number }} (없으면 workflow_dispatch로 수동 실행된 것)
+            관련 이슈 번호: ${{ steps.extract.outputs.issue_number }} (비어 있으면 workflow_dispatch로 수동 실행된 것)
 
             ## 절차
 
-            1. `data/words.json`을 읽어라. 이미 같은 단어(대소문자 무시)가 있으면 새 커밋을 만들지 말고, 이슈가 있다면
-               "이미 등록된 단어입니다: <링크>"라는 코멘트만 남기고 종료해라.
-            2. `README.md`와 기존 `data/words.json` 항목들을 참고해서 정확히 같은 스키마로 새 항목을 작성해라:
-               {
-                 "word": string,
-                 "korean": string (짧은 한국어 뜻),
-                 "formula": string (예: "ad-(~쪽으로) + plic-(접다, 포개다) + -ant(지금 그렇게 하고 있는 사람)"),
-                 "paragraphs": string[] (어근의 라틴어/그리스어 원형과 의미를 1~3문단으로 설명, **볼드**로 핵심 어근 강조 가능),
-                 "scene": string (한국어 뜻이 아니라 어원이 그리는 구체적인 장면을 1문단으로 묘사. "그게 <word>입니다"로 끝나면 좋음),
-                 "closing": string (사전적 번역이 놓치는 뉘앙스를 짚는 1~2문장),
-                 "family": [{ "word": string, "note": string }] (같은 어근을 가진 관련 단어 3~5개, note는 그 단어의 어원적 그림을 짧게),
-                 "bridge": string (선택, 두 단어가 어원상 짝을 이루는 통찰이 있을 때만)
-               }
-               내용은 반드시 한국어로, 기존 항목들과 같은 톤(어근의 물리적 동작을 구체적 장면으로 설명, 사전적 번역은 마지막에 상대화)으로 작성해라.
-               사실관계(라틴어/그리스어 어원)가 불확실하면 확실한 범위에서만 서술하고 과장하지 마라.
-            3. 새 항목을 `data/words.json` 배열에 word 기준 알파벳 순으로 삽입해라. 삽입 후 `python3 -c "import json; json.load(open('data/words.json'))"`
-               로 JSON이 유효한지 반드시 확인해라.
-            4. 새 브랜치(`word/<word-slug>`)를 만들고, 변경사항을 커밋한 뒤 푸시해라.
-            5. `gh pr create`로 PR을 열어라. 제목은 `단어 추가: <word>`, 본문에는 추가한 단어와 핵심 어근을 요약하고,
-               이슈 번호가 있다면 `Closes #<issue_number>`를 포함해라.
-            6. 이슈 번호가 있다면 `gh issue comment`로 "PR을 열었습니다: <PR 링크>" 코멘트를 남겨라.
+            1. `content/words/` 를 확인해라. `<word>.md` 가 이미 있으면 새 커밋을 만들지 말고,
+               이슈 번호가 있으면 "이미 등록된 단어입니다: https://voca.metacog.co.kr/words/<word>/"
+               코멘트만 남기고 종료해라.
+            2. 기존 항목(예: `content/words/applicant.md`)을 열어 형식과 톤을 파악해라.
+               새 파일 `content/words/<word>.md` 를 아래 YAML front matter 스키마로 작성한다:
 
-            변경 범위는 `data/words.json` 파일 하나로 제한해라. 다른 파일은 건드리지 마라.
+               ---
+               title: "<영어 단어>"
+               korean: "<짧은 한국어 뜻>"
+               formula: "<예: ad-(~쪽으로) + plic-(접다, 포개다) + -ant(지금 그렇게 하고 있는 사람)>"
+               roots:
+                 - "<핵심 어근 하나. formula에서 접두사/접미사를 뺀 가운데 어근. 예: plic>"
+               paragraphs:
+                 - "<어근의 라틴어/그리스어 원형과 의미 설명. 1~3개 문단. **볼드**로 어근 강조 가능>"
+               scene: "<한국어 뜻이 아니라 어원이 그리는 구체적인 장면을 1문단으로. '그게 <word>입니다'로 끝나면 좋음>"
+               closing: "<사전적 번역이 놓치는 뉘앙스를 짚는 1~2문장>"
+               family:
+                 - word: "<같은 어근을 가진 관련 단어>"
+                   note: "<그 단어의 어원적 그림을 짧게>"
+               bridge: "<선택. 두 단어가 어원상 짝을 이루는 통찰이 있을 때만>"
+               ---
+
+               (본문 영역은 비워 둔다. 모든 내용은 front matter에 담긴다.)
+
+               규칙:
+               - 모든 서술은 한국어로, 기존 항목과 같은 톤을 유지해라.
+                 어근의 물리적 동작을 구체적 장면으로 그리고, 사전적 번역은 마지막에 상대화한다.
+               - family는 3~5개.
+               - `roots` 는 반드시 소문자 한 개만. 기존 어근과 겹치면 자동으로 함께 묶여 표시된다.
+               - YAML 문자열 안의 큰따옴표는 `\"` 로 이스케이프해라.
+               - 사실관계(라틴어/그리스어 어원)가 불확실하면 확실한 범위에서만 서술하고 과장하지 마라.
+            3. `hugo --gc --minify` 를 실행해서 빌드가 성공하는지 반드시 확인해라.
+               실패하면 front matter 문법을 고쳐서 성공할 때까지 반복해라.
+               빌드 후 `public/words/<word>/index.html` 이 생성됐는지도 확인해라.
+            4. 새 브랜치(`word/<word>`)를 만들고 `content/words/<word>.md` 만 커밋한 뒤 푸시해라.
+               `public/` 과 `resources/` 는 빌드 산출물이므로 절대 커밋하지 마라.
+            5. `gh pr create` 로 PR을 열어라. 제목은 `단어 추가: <word>`, 본문에는 추가한 단어와 핵심 어근을 요약하고,
+               이슈 번호가 있으면 `Closes #<issue_number>` 를 포함해라.
+            6. 이슈 번호가 있으면 `gh issue comment` 로 "PR을 열었습니다: <PR 링크>" 코멘트를 남겨라.
+
+            변경 범위는 `content/words/<word>.md` 파일 하나로 제한해라. 다른 파일은 건드리지 마라.

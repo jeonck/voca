@@ -1,0 +1,14 @@
+{{ define "main" }}
+<nav class="crumbs">
+  <a href="{{ "/" | relURL }}">← 전체 단어</a>
+</nav>
+
+<h1 class="page-title">{{ .Title }}- 어근</h1>
+<p class="page-lede">이 어근을 공유하는 단어 {{ len .Pages }}개</p>
+
+<div class="card-grid">
+  {{ range sort .Pages "Title" }}
+    {{ partial "word-card.html" . }}
+  {{ end }}
+</div>
+{{ end }}

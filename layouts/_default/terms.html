@@ -1,0 +1,17 @@
+{{ define "main" }}
+<nav class="crumbs">
+  <a href="{{ "/" | relURL }}">← 전체 단어</a>
+</nav>
+
+<h1 class="page-title">어근 목록</h1>
+<p class="page-lede">{{ len .Data.Terms }}개의 어근</p>
+
+<div class="root-grid">
+  {{ range .Data.Terms.ByCount }}
+    <a class="root-card" href="{{ .Page.RelPermalink }}">
+      <span class="root-name">{{ .Page.Title }}-</span>
+      <span class="root-count">{{ .Count }}개</span>
+    </a>
+  {{ end }}
+</div>
+{{ end }}
