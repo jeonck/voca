@@ -1,0 +1,88 @@
+name: Generate word entry
+
+on:
+  issues:
+    types: [opened, labeled]
+  workflow_dispatch:
+    inputs:
+      word:
+        description: "추가할 영어 단어"
+        required: true
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+
+jobs:
+  generate:
+    if: >
+      github.event_name == 'workflow_dispatch' ||
+      (
+        contains(github.event.issue.labels.*.name, 'word-request') &&
+        (
+          github.event.issue.author_association == 'OWNER' ||
+          github.event.issue.author_association == 'COLLABORATOR' ||
+          github.event.issue.author_association == 'MEMBER'
+        )
+      )
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Resolve requested word
+        id: extract
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          DISPATCH_WORD: ${{ github.event.inputs.word }}
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: |
+          if [ "$EVENT_NAME" = "workflow_dispatch" ]; then
+            WORD="$DISPATCH_WORD"
+          else
+            WORD="$(echo "$ISSUE_TITLE" | sed -E 's/^\[word\]//I' | xargs)"
+          fi
+          if [ -z "$WORD" ]; then
+            echo "요청된 단어를 찾을 수 없습니다." >&2
+            exit 1
+          fi
+          echo "word=$WORD" >> "$GITHUB_OUTPUT"
+          echo "issue_number=$ISSUE_NUMBER" >> "$GITHUB_OUTPUT"
+
+      - name: Generate etymology entry with Claude Code
+        uses: anthropics/claude-code-action@v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          prompt: |
+            너는 "voca" 저장소에 새 영어 단어의 어원 설명을 추가하는 작업을 자동으로 수행한다.
+
+            요청된 단어: "${{ steps.extract.outputs.word }}"
+            관련 이슈 번호: ${{ steps.extract.outputs.issue_number }} (없으면 workflow_dispatch로 수동 실행된 것)
+
+            ## 절차
+
+            1. `data/words.json`을 읽어라. 이미 같은 단어(대소문자 무시)가 있으면 새 커밋을 만들지 말고, 이슈가 있다면
+               "이미 등록된 단어입니다: <링크>"라는 코멘트만 남기고 종료해라.
+            2. `README.md`와 기존 `data/words.json` 항목들을 참고해서 정확히 같은 스키마로 새 항목을 작성해라:
+               {
+                 "word": string,
+                 "korean": string (짧은 한국어 뜻),
+                 "formula": string (예: "ad-(~쪽으로) + plic-(접다, 포개다) + -ant(지금 그렇게 하고 있는 사람)"),
+                 "paragraphs": string[] (어근의 라틴어/그리스어 원형과 의미를 1~3문단으로 설명, **볼드**로 핵심 어근 강조 가능),
+                 "scene": string (한국어 뜻이 아니라 어원이 그리는 구체적인 장면을 1문단으로 묘사. "그게 <word>입니다"로 끝나면 좋음),
+                 "closing": string (사전적 번역이 놓치는 뉘앙스를 짚는 1~2문장),
+                 "family": [{ "word": string, "note": string }] (같은 어근을 가진 관련 단어 3~5개, note는 그 단어의 어원적 그림을 짧게),
+                 "bridge": string (선택, 두 단어가 어원상 짝을 이루는 통찰이 있을 때만)
+               }
+               내용은 반드시 한국어로, 기존 항목들과 같은 톤(어근의 물리적 동작을 구체적 장면으로 설명, 사전적 번역은 마지막에 상대화)으로 작성해라.
+               사실관계(라틴어/그리스어 어원)가 불확실하면 확실한 범위에서만 서술하고 과장하지 마라.
+            3. 새 항목을 `data/words.json` 배열에 word 기준 알파벳 순으로 삽입해라. 삽입 후 `python3 -c "import json; json.load(open('data/words.json'))"`
+               로 JSON이 유효한지 반드시 확인해라.
+            4. 새 브랜치(`word/<word-slug>`)를 만들고, 변경사항을 커밋한 뒤 푸시해라.
+            5. `gh pr create`로 PR을 열어라. 제목은 `단어 추가: <word>`, 본문에는 추가한 단어와 핵심 어근을 요약하고,
+               이슈 번호가 있다면 `Closes #<issue_number>`를 포함해라.
+            6. 이슈 번호가 있다면 `gh issue comment`로 "PR을 열었습니다: <PR 링크>" 코멘트를 남겨라.
+
+            변경 범위는 `data/words.json` 파일 하나로 제한해라. 다른 파일은 건드리지 마라.

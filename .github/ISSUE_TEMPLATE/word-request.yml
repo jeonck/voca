@@ -1,0 +1,25 @@
+name: 새 단어 요청
+description: voca 사이트에 어원 분석을 추가하고 싶은 영어 단어를 요청합니다.
+title: "[word] "
+labels: ["word-request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        요청하신 단어는 GitHub Actions가 자동으로 어원 분석을 작성해서 `data/words.json`에 추가하는 PR을 엽니다.
+        (자동 생성은 저장소 소유자/협업자만 트리거할 수 있어요.)
+  - type: input
+    id: word
+    attributes:
+      label: 영어 단어
+      description: 어원 분석을 원하는 영어 단어 하나를 입력하세요.
+      placeholder: applicant
+    validations:
+      required: true
+  - type: textarea
+    id: note
+    attributes:
+      label: 참고사항 (선택)
+      description: 특정 어근이나 관련 단어를 강조하고 싶다면 적어주세요.
+    validations:
+      required: false
