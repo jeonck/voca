@@ -1,9 +1,9 @@
 ---
 title: "generate"
 korean: "생성하다"
-formula: "gener-(낳다, 종류) + -ate(하게 만들다)"
+formula: "gen-/gener-(낳다, 종류) + -ate(하게 만들다)"
 roots:
-  - "gener"
+  - "gen"
 paragraphs:
   - "핵심은 **gen**입니다. 라틴어 *gignere*(genus), “낳다, 태어나게 하다”."
 scene: "어두운 자궁 같은 공간에서 무언가가 처음으로 형체를 갖추고 세상 밖으로 태어납니다. 이전에는 없던 것이 생명을 얻어 존재하기 시작하는 그 탄생의 순간이 generate입니다."
