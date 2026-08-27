@@ -1,6 +1,7 @@
 ---
 title: "nonmetal"
 date: 2026-08-27T19:05:15+00:00
+ipa: "/ˌnɑːnˈmetl/"
 korean: "비금속"
 formula: "non-(아닌) + metal-(캐낸 것)"
 roots:

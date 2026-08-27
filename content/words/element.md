@@ -1,6 +1,7 @@
 ---
 title: "element"
 date: 2026-08-27T19:05:15+00:00
+ipa: "/ˈelɪmənt/"
 korean: "원소, 요소"
 formula: "element-(더 쪼갤 수 없는 낱낱)"
 roots:

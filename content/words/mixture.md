@@ -1,6 +1,7 @@
 ---
 title: "mixture"
 date: 2026-08-27T19:05:15+00:00
+ipa: "/ˈmɪkstʃər/"
 korean: "혼합물"
 formula: "mix-(섞다) + -ture(그렇게 된 것)"
 roots:

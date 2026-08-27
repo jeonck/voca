@@ -1,6 +1,7 @@
 ---
 title: "credible"
 date: 2026-08-27T16:09:51+00:00
+ipa: "/ˈkredəbl/"
 korean: "믿을 만한"
 formula: "cred-(믿다) + -ible(할 수 있는)"
 roots:

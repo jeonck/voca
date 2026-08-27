@@ -1,6 +1,7 @@
 ---
 title: "synthetic"
 date: 2026-08-27T19:05:15+00:00
+ipa: "/sɪnˈθetɪk/"
 korean: "합성의, 인공의"
 formula: "syn-(함께) + thet-(놓다) + -ic(~한)"
 roots:

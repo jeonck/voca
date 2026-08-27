@@ -1,6 +1,7 @@
 ---
 title: "distract"
 date: 2026-08-27T16:09:51+00:00
+ipa: "/dɪˈstrækt/"
 korean: "산만하게 하다, 딴 데로 돌리다"
 formula: "dis-(따로따로) + tract-(끌다)"
 roots:

@@ -1,6 +1,7 @@
 ---
 title: "insulator"
 date: 2026-08-27T19:05:15+00:00
+ipa: "/ˈɪnsəleɪtər/"
 korean: "절연체, 부도체"
 formula: "insul-(섬) + -ate(그렇게 만들다) + -or(그러는 것)"
 roots:

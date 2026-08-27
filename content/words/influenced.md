@@ -1,6 +1,7 @@
 ---
 title: "influenced"
 date: 2026-08-27T19:05:15+00:00
+ipa: "/ˈɪnfluənst/"
 korean: "영향을 받은"
 formula: "in-(안으로) + flu-(흐르다) + -ence(그렇게 하는 것) + -ed(그것을 당한)"
 roots:

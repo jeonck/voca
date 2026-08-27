@@ -1,6 +1,7 @@
 ---
 title: "compose"
 date: 2026-08-27T16:09:51+00:00
+ipa: "/kəmˈpoʊz/"
 korean: "구성하다, 작곡하다"
 formula: "com-(함께) + pos-(놓다)"
 roots:

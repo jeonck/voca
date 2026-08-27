@@ -1,6 +1,7 @@
 ---
 title: "accept"
 date: 2026-08-27T16:09:51+00:00
+ipa: "/əkˈsept/"
 korean: "받아들이다"
 formula: "ac-(ad-, ~쪽으로) + cept-(잡다)"
 roots:

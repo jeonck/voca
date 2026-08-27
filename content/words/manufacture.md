@@ -1,6 +1,7 @@
 ---
 title: "manufacture"
 date: 2026-08-27T16:09:51+00:00
+ipa: "/ˌmænjəˈfæktʃər/"
 korean: "제조하다"
 formula: "manu-(손) + fact-(만들다)"
 roots:

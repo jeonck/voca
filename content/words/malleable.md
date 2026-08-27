@@ -1,6 +1,7 @@
 ---
 title: "malleable"
 date: 2026-08-27T19:05:15+00:00
+ipa: "/ˈmæliəbl/"
 korean: "전성이 있는"
 formula: "malle-(망치) + -able(~될 수 있는)"
 roots:

@@ -1,6 +1,7 @@
 ---
 title: "rare earth metal"
 date: 2026-08-27T19:05:15+00:00
+ipa: "/ˌrer ˈɜːrθ ˈmetl/"
 korean: "희토류 금속"
 formula: "rare-(성긴, 드문) + earth-(흙 — 옛 화학에서 '산화물') + metal-(캐낸 것)"
 roots:

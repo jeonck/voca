@@ -1,6 +1,7 @@
 ---
 title: "mass"
 date: 2026-08-27T19:05:15+00:00
+ipa: "/mæs/"
 korean: "질량, 덩어리"
 formula: "mass-(반죽 덩어리)"
 roots:

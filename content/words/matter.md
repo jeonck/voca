@@ -1,6 +1,7 @@
 ---
 title: "matter"
 date: 2026-08-27T19:05:15+00:00
+ipa: "/ˈmætər/"
 korean: "물질"
 formula: "mater-(어머니, 낳는 바탕) + -ia(그런 것)"
 roots:

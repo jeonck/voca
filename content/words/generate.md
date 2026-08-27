@@ -1,6 +1,7 @@
 ---
 title: "generate"
 date: 2026-08-27T16:09:51+00:00
+ipa: "/ˈdʒenəreɪt/"
 korean: "생성하다"
 formula: "gen-/gener-(낳다, 종류) + -ate(하게 만들다)"
 roots:

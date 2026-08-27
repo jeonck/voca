@@ -1,6 +1,7 @@
 ---
 title: "transfer"
 date: 2026-08-27T16:09:51+00:00
+ipa: "/trænsˈfɜːr/ (동사) · /ˈtrænsfɜːr/ (명사)"
 korean: "옮기다, 이체하다"
 formula: "trans-(가로질러) + fer-(나르다)"
 roots:

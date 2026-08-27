@@ -1,6 +1,7 @@
 ---
 title: "homogeneous mixture"
 date: 2026-08-27T19:05:15+00:00
+ipa: "/ˌhoʊməˈdʒiːniəs ˈmɪkstʃər/"
 korean: "균일 혼합물"
 formula: "homo-(같은) + gen-(종류, 태생) + -eous(~한) · mixture(섞인 것)"
 roots:

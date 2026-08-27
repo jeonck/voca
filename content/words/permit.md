@@ -1,6 +1,7 @@
 ---
 title: "permit"
 date: 2026-08-27T16:09:51+00:00
+ipa: "/pərˈmɪt/ (동사) · /ˈpɜːrmɪt/ (명사)"
 korean: "허락하다"
 formula: "per-(끝까지 관통해서) + mit-(보내다)"
 roots:

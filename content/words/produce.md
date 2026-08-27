@@ -1,6 +1,7 @@
 ---
 title: "produce"
 date: 2026-08-27T16:09:51+00:00
+ipa: "/prəˈduːs/ (동사) · /ˈproʊduːs/ (명사: 농산물)"
 korean: "생산하다"
 formula: "pro-(앞으로) + duc-(이끌다)"
 roots:

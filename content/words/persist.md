@@ -1,6 +1,7 @@
 ---
 title: "persist"
 date: 2026-08-27T16:09:51+00:00
+ipa: "/pərˈsɪst/"
 korean: "지속하다, 고집하다"
 formula: "per-(끝까지) + sist-(서다)"
 roots:

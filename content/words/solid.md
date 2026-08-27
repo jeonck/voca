@@ -1,6 +1,7 @@
 ---
 title: "solid"
 date: 2026-08-27T19:05:15+00:00
+ipa: "/ˈsɑːlɪd/"
 korean: "고체, 단단한"
 formula: "solid-(빈틈없이 꽉 찬, 단단한)"
 roots:

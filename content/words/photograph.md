@@ -1,6 +1,7 @@
 ---
 title: "photograph"
 date: 2026-08-27T16:09:51+00:00
+ipa: "/ˈfoʊtəɡræf/"
 korean: "사진"
 formula: "photo-(빛) + graph-(그리다, 새기다)"
 roots:

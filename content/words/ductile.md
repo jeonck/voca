@@ -1,6 +1,7 @@
 ---
 title: "ductile"
 date: 2026-08-27T19:05:15+00:00
+ipa: "/ˈdʌktəl/ (미) · /ˈdʌktaɪl/ (영)"
 korean: "연성이 있는"
 formula: "duc-(이끌다, 끌어당기다) + -ile(~될 수 있는)"
 roots:

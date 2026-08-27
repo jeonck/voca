@@ -1,6 +1,7 @@
 ---
 title: "reject"
 date: 2026-08-27T16:09:51+00:00
+ipa: "/rɪˈdʒekt/ (동사) · /ˈriːdʒekt/ (명사: 불량품)"
 korean: "거절하다"
 formula: "re-(뒤로) + ject-(던지다)"
 roots:

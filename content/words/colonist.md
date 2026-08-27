@@ -1,6 +1,7 @@
 ---
 title: "colonist"
 date: 2026-08-27T19:05:15+00:00
+ipa: "/ˈkɑːlənɪst/"
 korean: "식민지 개척민, 정착민"
 formula: "colon-(땅을 일구다, 눌러살다) + -ist(그렇게 하는 사람)"
 roots:

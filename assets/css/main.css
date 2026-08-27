@@ -193,6 +193,14 @@ footer.site a { color: var(--ink-soft); }
   line-height: 1.2;
 }
 
+.card-ipa {
+  margin: 0.1rem 0 0.15rem;
+  font-size: 0.76rem;
+  color: var(--ink-soft);
+  opacity: 0.8;
+  line-height: 1.4;
+}
+
 .card-korean {
   margin: 0 0 0.6rem;
   color: var(--ink-soft);
@@ -278,6 +286,13 @@ footer.site a { color: var(--ink-soft); }
   font-size: clamp(1.9rem, 5vw, 2.5rem);
   margin: 0.3rem 0 0.2rem;
   line-height: 1.15;
+}
+
+.detail-ipa {
+  margin: 0.2rem 0 0.35rem;
+  font-size: 1rem;
+  color: var(--ink-soft);
+  line-height: 1.5;
 }
 
 .detail-korean {

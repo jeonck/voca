@@ -1,6 +1,7 @@
 ---
 title: "metal"
 date: 2026-08-27T19:05:15+00:00
+ipa: "/ˈmetl/"
 korean: "금속"
 formula: "metal-(캐내다, 캐내는 곳)"
 roots:

@@ -1,6 +1,7 @@
 ---
 title: "solution"
 date: 2026-08-27T19:05:15+00:00
+ipa: "/səˈluːʃn/"
 korean: "용액, 해결"
 formula: "solv-/solu-(풀다, 느슨하게 하다) + -tion(그렇게 하는 것)"
 roots:

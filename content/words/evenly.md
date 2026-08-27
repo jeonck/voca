@@ -1,6 +1,7 @@
 ---
 title: "evenly"
 date: 2026-08-27T19:05:15+00:00
+ipa: "/ˈiːvnli/"
 korean: "고르게"
 formula: "even-(평평한, 같은 높이의) + -ly(그렇게)"
 roots:

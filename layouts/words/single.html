@@ -13,6 +13,7 @@
     <time class="detail-date" datetime="{{ .Date.Format "2006-01-02" }}">추가 {{ .Date.Format "2006.01.02" }}</time>
   </span>
   <h1 class="detail-title">{{ .Title }}</h1>
+  {{ with .Params.ipa }}<p class="detail-ipa">{{ . }}</p>{{ end }}
   <p class="detail-korean">{{ .Params.korean }}</p>
 
   <p class="formula">

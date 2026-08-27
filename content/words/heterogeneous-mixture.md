@@ -1,6 +1,7 @@
 ---
 title: "heterogeneous mixture"
 date: 2026-08-27T19:05:15+00:00
+ipa: "/ˌhetərəˈdʒiːniəs ˈmɪkstʃər/"
 korean: "불균일 혼합물"
 formula: "hetero-(다른) + gen-(종류, 태생) + -eous(~한) · mixture(섞인 것)"
 roots:

@@ -1,6 +1,7 @@
 ---
 title: "compound"
 date: 2026-08-27T19:05:15+00:00
+ipa: "/ˈkɑːmpaʊnd/ (명사) · /kəmˈpaʊnd/ (동사)"
 korean: "화합물"
 formula: "com-(함께) + -pound(pon-, 놓다)"
 roots:

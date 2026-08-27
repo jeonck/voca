@@ -1,6 +1,7 @@
 ---
 title: "remove"
 date: 2026-08-27T16:09:51+00:00
+ipa: "/rɪˈmuːv/"
 korean: "옮기다, 제거하다"
 formula: "re-(뒤로) + mov-(움직이다)"
 roots:

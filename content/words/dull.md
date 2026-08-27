@@ -1,6 +1,7 @@
 ---
 title: "dull"
 date: 2026-08-27T19:05:15+00:00
+ipa: "/dʌl/"
 korean: "광택이 없는, 무딘"
 formula: "dol-(무디다, 둔하다) — 고대영어 계열"
 roots:

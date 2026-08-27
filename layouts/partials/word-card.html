@@ -11,6 +11,7 @@
     <time class="card-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006.01.02" }}</time>
   </span>
   <h2 class="card-word">{{ .Title }}</h2>
+  {{ with .Params.ipa }}<p class="card-ipa">{{ . }}</p>{{ end }}
   <p class="card-korean">{{ .Params.korean }}</p>
   <p class="card-formula">{{ partial "rich.html" (dict "page" .Page "text" .Params.formula) }}</p>
 </a>
