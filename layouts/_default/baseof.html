@@ -21,8 +21,9 @@
 
   <footer class="site">
     <p>
-      <a href="https://github.com/{{ .Site.Params.repo }}">GitHub 저장소</a>
-      · 총 {{ len (where .Site.RegularPages "Section" "words") }}개 단어
+      <a href="{{ "/" | relURL }}">전체 단어 {{ len (where .Site.RegularPages "Section" "words") }}개</a>
+      · <a href="{{ "/roots/" | relURL }}">어근 {{ len .Site.Taxonomies.roots }}개</a>
+      · <a href="https://github.com/{{ .Site.Params.repo }}">GitHub 저장소</a>
     </p>
   </footer>
 </body>

@@ -16,6 +16,11 @@
   {{ end }}
 </div>
 
+{{/* 어근 목록 페이지 입구. #root-chips 바깥에 두어 필터 클릭 핸들러와 얽히지 않게 한다. */}}
+<p class="roots-link">
+  <a href="{{ "/roots/" | relURL }}">어근 {{ len .Site.Taxonomies.roots }}개 전체 보기 →</a>
+</p>
+
 <div class="card-grid" id="card-grid">
   {{ range $words }}
     {{ partial "word-card.html" . }}

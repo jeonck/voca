@@ -134,6 +134,18 @@ footer.site a { color: var(--ink-soft); }
 
 .chip-count { opacity: 0.6; font-size: 0.8em; }
 
+.roots-link {
+  margin: -1.25rem 0 1.75rem;
+  font-size: 0.88rem;
+}
+
+.roots-link a {
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.roots-link a:hover { border-bottom-color: var(--accent); }
+
 /* ---------- card grid ---------- */
 
 .card-grid {
