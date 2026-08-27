@@ -18,6 +18,7 @@ data/words.json      단어 데이터 (아래 스키마)
 CNAME                커스텀 도메인(voca.metacog.co.kr) 설정
 .github/ISSUE_TEMPLATE/word-request.yml   "새 단어 요청" 이슈 폼
 .github/workflows/generate-word.yml       요청된 단어를 자동 생성하는 워크플로
+.github/workflows/pages.yml               main push 시 GitHub Pages로 배포
 ```
 
 ## data/words.json 스키마
@@ -54,10 +55,14 @@ CNAME                커스텀 도메인(voca.metacog.co.kr) 설정
 1. **Settings → Actions → General → Workflow permissions**: "Read and write permissions"로 설정 (PR 생성에 필요).
 2. **Settings → Secrets and variables → Actions**: `CLAUDE_CODE_OAUTH_TOKEN` 시크릿이 등록되어 있어야 합니다
    (로컬에서 `claude setup-token`으로 발급). 다른 이름으로 등록했다면 `generate-word.yml`의 시크릿 이름을 맞춰주세요.
-3. **Settings → Pages**: Source를 "Deploy from a branch" → Branch `main` / `/(root)`로 설정하세요.
-   Custom domain 칸에 `voca.metacog.co.kr`을 입력하면(이미 `CNAME` 파일이 있어 자동 인식될 수도 있습니다)
-   GitHub가 DNS 확인 후 HTTPS 인증서를 발급합니다. DNS(CNAME 레코드 → `<owner>.github.io`)는 이미 완료되었다고
-   하셨으니, 이 설정만 켜면 됩니다.
+3. **Settings → Pages**: Source를 **"GitHub Actions"** 로 설정하세요.
+   배포는 `.github/workflows/pages.yml`이 담당하며, `main`에 push될 때마다 자동으로 다시 배포됩니다.
+   Custom domain 칸의 `voca.metacog.co.kr`은 저장소의 `CNAME` 파일에서 자동 인식되고,
+   DNS 확인이 끝나면 HTTPS 인증서가 발급됩니다.
+
+   > 참고: 초기에는 "Deploy from a branch" 방식을 썼는데, 빌드가 한 번도 게시되지 않으면서
+   > (`There isn't a GitHub Pages site here`) 아무 로그도 남지 않아 원인 추적이 불가능했습니다.
+   > Actions 배포 방식은 매 배포가 Actions 탭에 기록되므로 실패해도 바로 진단할 수 있습니다.
 
 ## 로컬 확인
 
