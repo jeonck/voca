@@ -21,4 +21,9 @@ family:
     note: "타고난 재능"
   - word: "nation"
     note: "태어난(nat-) 사람들의 집단 = 국가, gen과 뿌리가 가까운 사촌"
+antonyms:
+  - word: "destroy"
+    note: "쌓은 것을 헐어 없애다"
+  - word: "eradicate"
+    note: "뿌리(radic-)째 뽑아내다 = 근절하다"
 ---

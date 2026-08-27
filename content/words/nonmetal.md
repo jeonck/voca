@@ -20,4 +20,7 @@ family:
     note: "말(sense)이 아닌 것 = 헛소리 — 같은 non-"
   - word: "nonprofit"
     note: "이익을 목적으로 하지 않는 = 비영리의"
+antonyms:
+  - word: "metal"
+    note: "굴에서 캐낸 것 = 금속"
 ---

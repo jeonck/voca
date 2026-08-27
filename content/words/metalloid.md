@@ -23,4 +23,9 @@ family:
     note: "셀룰로스처럼 생긴 것 = 셀룰로이드"
   - word: "metal"
     note: "캐낸 것 = 금속"
+antonyms:
+  - word: "metal"
+    note: "완전히 금속인 쪽"
+  - word: "nonmetal"
+    note: "완전히 금속이 아닌 쪽 — metalloid는 이 둘 사이 회색지대"
 ---

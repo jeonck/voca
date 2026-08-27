@@ -22,4 +22,9 @@ family:
     note: "~로부터(apo-) 벗어나려는 말 = 사과·변론"
   - word: "biology"
     note: "생명(bio-)을 다루는 학문"
+antonyms:
+  - word: "monologue"
+    note: "혼자(mono-) 하는 말 — 둘 사이를 오가는 dialogue와 반대"
+  - word: "silence"
+    note: "말 자체가 오가지 않는 상태"
 ---

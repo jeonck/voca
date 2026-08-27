@@ -22,4 +22,9 @@ family:
     note: "붙잡힌 사람 = 포로"
   - word: "recipe"
     note: "다시(re-) 받아 잡은 것 = 조리법"
+antonyms:
+  - word: "reject"
+    note: "밖으로(re-) 도로 던져 버리다 — 손을 뻗어 붙잡는 accept와 정확히 반대 동작"
+  - word: "refuse"
+    note: "되(re-) 쏟아붓다 = 거절하다"
 ---

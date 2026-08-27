@@ -20,4 +20,9 @@ family:
     note: "소리와 관련된"
   - word: "megaphone"
     note: "크게(mega-) 만든 소리 기계 = 확성기"
+antonyms:
+  - word: "cacophony"
+    note: "나쁜(kako-) 소리 — 같은 phon- 뿌리의 정반대, 어우러지지 않고 부딪히는 소리"
+  - word: "dissonance"
+    note: "따로(dis-) 울리는 소리 = 불협화음"
 ---

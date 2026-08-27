@@ -19,4 +19,7 @@ family:
     note: "아래에서(sub-) 짊어지고 견디다 = 고통받다"
   - word: "offer"
     note: "~쪽으로(ob-) 내밀어 나르다 = 제공하다"
+antonyms:
+  - word: "retain"
+    note: "다시(re-) 붙잡아 두다 = 넘기지 않고 쥐고 있다"
 ---

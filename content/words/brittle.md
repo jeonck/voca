@@ -19,5 +19,12 @@ family:
     note: "쉽게 변하는 — 같은 -le 꼴"
   - word: "nimble"
     note: "쉽게 움직이는 = 날렵한 — 같은 -le 꼴"
+antonyms:
+  - word: "malleable"
+    note: "두들기면 얇게 펴지는 = 전성이 있는"
+  - word: "ductile"
+    note: "잡아당기면 실처럼 늘어나는 = 연성이 있는"
+  - word: "tough"
+    note: "깨지지 않고 버티는 = 질긴"
 bridge: "malleable과 brittle은 같은 망치 아래 갈립니다. 두들겨 펴지면 malleable, 조각나면 brittle이에요."
 ---

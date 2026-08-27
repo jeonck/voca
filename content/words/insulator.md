@@ -23,4 +23,7 @@ family:
     note: "섬"
   - word: "conductor"
     note: "반대편 짝 — 함께 이끌어 통하게 하는 것 = 도체"
+antonyms:
+  - word: "conductor"
+    note: "함께 이끌어 통하게 하는 것 = 도체 — 섬처럼 끊는 insulator와 정반대"
 ---

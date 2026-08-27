@@ -22,5 +22,10 @@ family:
     note: "밖으로(e-) 이끌어내다 = 교육하다"
   - word: "aqueduct"
     note: "물(aqua)을 끌어오는 길 = 수로교"
+antonyms:
+  - word: "brittle"
+    note: "끌면 늘어나지 않고 조각나는 = 부서지기 쉬운"
+  - word: "rigid"
+    note: "끌어도 형태를 내주지 않는 = 뻣뻣한"
 bridge: "ductile과 malleable은 금속의 두 성질을 짝으로 말합니다. 하나는 잡아당겨 실로 뽑히는 성질(끌다), 다른 하나는 두들겨 판으로 펴지는 성질(망치)이에요."
 ---

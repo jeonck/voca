@@ -23,5 +23,10 @@ family:
     note: "맞은편에(ob-) 놓인 사람 = 상대"
   - word: "position"
     note: "놓인 자리 = 위치"
+antonyms:
+  - word: "element"
+    note: "더 쪼갤 수 없는 낱낱 — 결합해서 생긴 compound와 반대편"
+  - word: "mixture"
+    note: "함께 놓이기만 하고 하나로 맞춰지지는 않은 것"
 bridge: "compose와 compound는 같은 라틴어 동사 ponere에서 갈라진 쌍둥이입니다. 하나는 라틴어에서 곧장, 하나는 프랑스어를 거쳐 들어왔을 뿐이에요."
 ---

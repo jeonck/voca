@@ -23,4 +23,9 @@ family:
     note: "무언가가 자라 나오는 모체·틀"
   - word: "matriculate"
     note: "명부(matrix)에 올려 학적을 얻다 = 입학하다"
+antonyms:
+  - word: "energy"
+    note: "안에서(en-) 일하는(erg-) 힘 = 물질과 짝을 이루는 물리량"
+  - word: "spirit"
+    note: "숨(spir-) = 정신 — 다만 matter의 어원은 '낳는 바탕'이라 이 대립과 잘 맞지는 않습니다"
 ---

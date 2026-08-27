@@ -22,4 +22,9 @@ family:
     note: "함께(com-) 보내다 = 맡기다·저지르다"
   - word: "promise"
     note: "앞으로(pro-) 보내는 약속의 말"
+antonyms:
+  - word: "prohibit"
+    note: "앞을(pro-) 막아 서다 = 금지하다 — 통과시켜 보내는 permit과 반대"
+  - word: "forbid"
+    note: "말로 막다 = 금하다"
 ---

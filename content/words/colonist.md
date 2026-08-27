@@ -22,5 +22,10 @@ family:
     note: "밭(agri-)을 일구는 일 = 농업"
   - word: "cult"
     note: "원래는 특정 신을 정성껏 \"가꾸는\" 예배 행위"
+antonyms:
+  - word: "indigenous"
+    note: "안에서(indi-) 태어난(gen-) = 그 땅에서 나고 자란 — 들어와 일구는 colonist와 반대"
+  - word: "native"
+    note: "태어난(nat-) 그곳의 = 원주민의"
 bridge: "colonist와 culture가 한 뿌리라는 건 씁쓸한 우연이 아닙니다. 라틴어에서 \"땅을 차지해 일구는 일\"과 \"문화를 가꾸는 일\"이 애초에 구분되지 않았거든요."
 ---

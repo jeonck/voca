@@ -20,4 +20,9 @@ family:
     note: "함께(con-) 끌어당겨 좁히다 = 계약·수축"
   - word: "tractor"
     note: "끌어당기는 기계"
+antonyms:
+  - word: "attract"
+    note: "~쪽으로(ad-) 끌다 — 사방으로 찢어 끄는 distract와 반대 방향"
+  - word: "concentrate"
+    note: "한 중심(centr-)으로 끌어모으다 = 집중시키다"
 ---

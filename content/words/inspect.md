@@ -22,4 +22,9 @@ family:
     note: "볼 만한 광경"
   - word: "suspect"
     note: "아래에서(sub-) 몰래 훔쳐보는 것 = 의심하다"
+antonyms:
+  - word: "overlook"
+    note: "위로(over-) 넘겨보다 = 못 보고 지나치다 — 안을 들여다보는 inspect와 반대"
+  - word: "ignore"
+    note: "알(gno-)려 하지 않다 = 무시하다"
 ---

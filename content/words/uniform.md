@@ -23,4 +23,9 @@ family:
     note: "작은 형태 = 정해진 꼴·공식"
   - word: "uniformity"
     note: "형태가 하나임 = 균일성"
+antonyms:
+  - word: "diverse"
+    note: "따로(di-) 돌아 갈라진(vert-) = 다양한 — 형태가 하나인 uniform과 반대"
+  - word: "varied"
+    note: "여러 갈래로 변한 = 제각각인"
 ---

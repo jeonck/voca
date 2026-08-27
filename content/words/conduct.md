@@ -23,4 +23,9 @@ family:
     note: "끌면 늘어나는 = 연성이 있는"
   - word: "reduce"
     note: "뒤로(re-) 이끌어 줄이다 = 감소시키다"
+antonyms:
+  - word: "insulate"
+    note: "섬처럼(insula) 떼어 끊다 = 절연하다"
+  - word: "block"
+    note: "길을 막아서다"
 ---

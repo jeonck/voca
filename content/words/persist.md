@@ -22,4 +22,9 @@ family:
     note: "밖으로(ex-) 나와 서다 = 존재하다"
   - word: "stable"
     note: "안정적으로 서 있는"
+antonyms:
+  - word: "desist"
+    note: "de-(그만) + sist-(서다) = 서 있기를 그만두다 — 같은 sist- 뿌리의 정반대"
+  - word: "yield"
+    note: "자리를 내주다 = 굴복하다"
 ---

@@ -23,4 +23,9 @@ family:
     note: "둘로(dicho-) 자른 것 = 이분법"
   - word: "epitome"
     note: "잘라내어 요약한 것 = 전형·정수"
+antonyms:
+  - word: "monatomic"
+    note: "홀로(mono-) 다니는 원자 하나짜리 — 둘씩 붙어 다니는 diatomic과 반대"
+  - word: "polyatomic"
+    note: "여럿(poly-)이 붙은"
 ---

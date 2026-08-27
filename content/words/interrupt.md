@@ -22,4 +22,9 @@ family:
     note: "따로따로(dis-) 깨뜨리다 = 붕괴시키다"
   - word: "rupture"
     note: "파열"
+antonyms:
+  - word: "continue"
+    note: "함께(con-) 붙잡아 이어가다 — 중간을 깨는 interrupt와 반대"
+  - word: "resume"
+    note: "다시(re-) 집어 들다 = 재개하다"
 ---

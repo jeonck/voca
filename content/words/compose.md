@@ -22,4 +22,9 @@ family:
     note: "맞은편에(ob-) 놓다 = 반대하다"
   - word: "postpone"
     note: "뒤에(post-) 놓다 = 연기하다"
+antonyms:
+  - word: "decompose"
+    note: "de-(거꾸로) + compose = 함께 놓았던 것을 도로 흩다 = 분해하다"
+  - word: "dismantle"
+    note: "덮어놓은 것을 걷어내다 = 해체하다"
 ---

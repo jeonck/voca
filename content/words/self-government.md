@@ -20,4 +20,9 @@ family:
     note: "키잡이(kybernan)의 학문 = 제어·피드백 이론"
   - word: "cyberspace"
     note: "그 kybernan에서 갈라져 나온 \"사이버\""
+antonyms:
+  - word: "colonial rule"
+    note: "키를 남이 잡는 상태 = 식민 통치 — 내가 키를 잡는 self-government와 반대"
+  - word: "subjugation"
+    note: "멍에(jug-) 아래(sub-)에 놓임 = 예속"
 ---

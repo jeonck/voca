@@ -19,4 +19,11 @@ family:
     note: "머리가 둔한 — 이 단어의 원래 쓰임이 남아 있는 표현"
   - word: "독일어 toll · 네덜란드어 dol"
     note: "같은 게르만어 뿌리에서 갈라진 사촌들"
+antonyms:
+  - word: "lustrous"
+    note: "빛을 되쏘아 반짝이는 = 광택 있는 — 빛을 삼키는 dull과 반대"
+  - word: "metallic"
+    note: "금속광택의 — 광물학에서 dull과 짝을 이루는 분류"
+  - word: "sharp"
+    note: "날이 서 있는 = 예리한 (칼을 말할 때의 반대)"
 ---

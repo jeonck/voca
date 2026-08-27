@@ -22,4 +22,9 @@ family:
     note: "하나로(uni-) 돌아 합쳐진 것 = 우주"
   - word: "versatile"
     note: "이리저리 잘 도는 = 다재다능한"
+antonyms:
+  - word: "proceed"
+    note: "앞으로(pro-) 나아가다 = 진행하다 — 몸을 돌려 되돌아가는 revert와 반대"
+  - word: "advance"
+    note: "앞으로 밀고 나아가다"
 ---

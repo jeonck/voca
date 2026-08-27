@@ -22,4 +22,9 @@ family:
     note: "맞은편에(anti-) 놓은 것 = 대조·반대"
   - word: "theme"
     note: "놓여 있는 바탕 = 주제"
+antonyms:
+  - word: "natural"
+    note: "태어난(nat-) 그대로의 = 천연의 — 놓아 붙여 만든 synthetic과 반대"
+  - word: "organic"
+    note: "살아 있는 기관(organ-)에서 나온 = 유기농의"
 ---

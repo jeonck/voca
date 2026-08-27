@@ -18,5 +18,10 @@ family:
     note: "귓속에서 소리를 두드려 전하는 망치뼈 = 추골"
   - word: "maul"
     note: "망치처럼 내리쳐 짓이기다"
+antonyms:
+  - word: "brittle"
+    note: "두들기면 펴지지 않고 깨지는 = 부서지기 쉬운 — 같은 망치 아래 갈리는 반대편"
+  - word: "rigid"
+    note: "두들겨도 모양을 내주지 않는 = 뻣뻣한"
 bridge: "malleable의 반대편에 brittle이 있습니다. 같은 망치를 맞고 하나는 펴지고 하나는 부서지죠."
 ---

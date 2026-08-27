@@ -23,4 +23,9 @@ family:
     note: "앞으로 이끌어 내다 = 생산하다"
   - word: "semifinal"
     note: "절반 지점의 결승 = 준결승 — 같은 semi-"
+antonyms:
+  - word: "conductor"
+    note: "늘 통하게 이끄는 것 = 도체"
+  - word: "insulator"
+    note: "섬처럼 끊어 못 통하게 하는 것 = 부도체 — 반도체는 이 둘 사이에서 조건에 따라 오간다"
 ---

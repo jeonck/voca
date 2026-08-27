@@ -20,5 +20,10 @@ family:
     note: "아래에(sub-) 던져져 깔린 것, 즉 주제·신하"
   - word: "inject"
     note: "안으로(in-) 던져 넣는 것, 주사"
+antonyms:
+  - word: "accept"
+    note: "~쪽으로(ad-) 손을 뻗어 붙잡다 — 되던지는 reject와 반대 방향"
+  - word: "embrace"
+    note: "팔(brace)로 감싸 안다"
 bridge: "reject와 project는 둘 다 “던지다”지만 방향이 정반대예요 — 하나는 되돌리고, 하나는 앞으로 쏘아 보냅니다."
 ---

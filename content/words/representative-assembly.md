@@ -23,4 +23,7 @@ family:
     note: "같은 모양으로 나란한 = 비슷한"
   - word: "simultaneous"
     note: "한 시점에 겹쳐 일어나는 = 동시의"
+antonyms:
+  - word: "direct democracy"
+    note: "대신 세우지 않고 본인이 직접 결정하는 방식 = 직접 민주주의"
 ---

@@ -21,4 +21,9 @@ family:
     note: "고름"
   - word: "evening"
     note: "※ 어원이 다른 남남 — 고대영어 æfen(저녁)에서 왔습니다"
+antonyms:
+  - word: "unevenly"
+    note: "높낮이가 고르지 않게"
+  - word: "irregularly"
+    note: "자(regula) 없이 들쭉날쭉하게"
 ---

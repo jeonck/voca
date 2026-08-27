@@ -22,5 +22,10 @@ family:
     note: "여러 곡을 섞어 이은 것 = 접속곡"
   - word: "meddle"
     note: "남의 일에 섞여 들다 = 참견하다"
+antonyms:
+  - word: "compound"
+    note: "함께 놓여 하나로 맞춰진 것 = 화합물 — 섞이기만 한 mixture와 반대"
+  - word: "pure substance"
+    note: "한 가지로만 이루어진 것 = 순물질"
 bridge: "mixture와 compound는 짝으로 외우면 좋습니다. 하나는 \"섞기만 한 것\"(miscere), 다른 하나는 \"함께 놓여 하나로 맞춰진 것\"(componere)이니까요."
 ---

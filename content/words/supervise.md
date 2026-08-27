@@ -22,4 +22,7 @@ family:
     note: "미리(pro-) 내다보다 = 제공하다"
   - word: "evident"
     note: "밖으로(e-) 드러나 보이는 = 명백한"
+antonyms:
+  - word: "neglect"
+    note: "골라내지(leg-) 않고 내버려두다 = 방치하다 — 위에서 지켜보는 supervise와 반대"
 ---

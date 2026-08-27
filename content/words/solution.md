@@ -23,4 +23,7 @@ family:
     note: "풀려나(ab-) 아무 조건에도 매이지 않은 = 절대적인"
   - word: "solvent"
     note: "풀어주는 것 = 용매"
+antonyms:
+  - word: "problem"
+    note: "앞으로(pro-) 던져진(bl-) 것 = 눈앞에 놓인 과제 — 푸는 solution과 던져진 problem이 짝을 이룹니다"
 ---

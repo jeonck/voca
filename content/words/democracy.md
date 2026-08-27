@@ -22,4 +22,11 @@ family:
     note: "민중 쪽에 힘을 두려는 사람"
   - word: "aristocracy"
     note: "가장 뛰어난 자(aristos)가 힘을 쥔 = 귀족정"
+antonyms:
+  - word: "autocracy"
+    note: "자기(auto-) 혼자 힘을 쥔 = 독재"
+  - word: "oligarchy"
+    note: "소수(oligo-)가 지배하는 = 과두정"
+  - word: "aristocracy"
+    note: "가장 뛰어난 자(aristos)가 힘을 쥔 = 귀족정"
 ---

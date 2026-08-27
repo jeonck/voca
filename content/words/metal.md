@@ -21,4 +21,7 @@ family:
     note: "metal의 갈라진 철자 = 기개·근성"
   - word: "metalwork"
     note: "금속 세공"
+antonyms:
+  - word: "nonmetal"
+    note: "금속이 아닌 것 — 공통점이 아니라 '아님'으로 묶인 무리"
 ---

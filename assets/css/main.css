@@ -440,6 +440,13 @@ footer.site a { color: var(--ink-soft); }
   margin-right: 0.4rem;
 }
 
+/* 반대말은 친척 목록과 구분되게 왼쪽에 표시선을 둔다. */
+.antonym-list li {
+  border-left: 3px solid var(--line);
+}
+
+.antonym-list .fw { color: var(--accent); }
+
 .bridge {
   margin-top: 1.75rem;
   padding-top: 1.25rem;

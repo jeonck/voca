@@ -20,4 +20,9 @@ family:
     note: "되돌아 도는 것 = 혁명·회전"
   - word: "volume"
     note: "말려서 두꺼워진 것 = 부피·책 한 권"
+antonyms:
+  - word: "evolve"
+    note: "밖으로(e-) 말려 나오다 — 같은 volv- 뿌리에 방향만 반대"
+  - word: "exclude"
+    note: "밖에(ex-) 두고 닫아걸다 = 배제하다"
 ---

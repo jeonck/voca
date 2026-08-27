@@ -5,7 +5,7 @@
 // 검색어를 넣으면 전체 단어에서 찾은 뒤 그 결과를 다시 페이지로 나눈다.
 // (Hugo 기본 페이지네이션을 쓰면 현재 페이지에 있는 카드만 검색되어 버린다.)
 (function () {
-  var PAGE_SIZE = 24;
+  var PAGE_SIZE = 12;
 
   var search = document.getElementById("search");
   var chipBox = document.getElementById("root-chips");
@@ -32,9 +32,15 @@
     return okRoot && okQuery;
   }
 
-  // 1 … 4 5 6 … 10 형태로 페이지 번호를 추린다.
+  // 페이지가 얼마 없으면 전부 보여주고, 많아지면 1 … 7 8 9 … 15 형태로 추린다.
+  var PAGER_MAX = 7;
+
   function pageList(cur, total) {
     var out = [];
+    if (total <= PAGER_MAX) {
+      for (var n = 1; n <= total; n++) out.push(n);
+      return out;
+    }
     for (var i = 1; i <= total; i++) {
       var near = i === 1 || i === total || Math.abs(i - cur) <= 1;
       var item = near ? i : "…";

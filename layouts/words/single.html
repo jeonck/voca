@@ -44,6 +44,18 @@
     </ul>
   {{ end }}
 
+  {{ with .Params.antonyms }}
+    <h2 class="section-title">반대말</h2>
+    <ul class="family-list antonym-list">
+      {{ range . }}
+        <li>
+          <span class="fw">{{ .word }}</span>
+          {{ partial "rich.html" (dict "page" $.Page "text" .note) }}
+        </li>
+      {{ end }}
+    </ul>
+  {{ end }}
+
   {{ with .Params.bridge }}
     <p class="bridge">{{ partial "rich.html" (dict "page" $.Page "text" .) }}</p>
   {{ end }}

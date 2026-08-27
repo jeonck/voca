@@ -23,5 +23,8 @@ family:
     note: "종류 = 속(생물 분류)"
   - word: "gene"
     note: "태생을 담은 단위 = 유전자"
+antonyms:
+  - word: "heterogeneous mixture"
+    note: "다른(hetero-) 종류가 자리마다 다르게 섞인 것 — 같은 gen- 뿌리에 앞머리만 반대"
 bridge: "solution(용액)은 homogeneous mixture의 대표적인 예입니다. 어원으로도 이어지죠 — 풀어져(solv-) 흩어졌기 때문에 어디를 떠도 같아진 겁니다."
 ---

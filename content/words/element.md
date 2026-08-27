@@ -19,4 +19,9 @@ family:
     note: "낱낱 그대로의 = 근원적인"
   - word: "the elements"
     note: "쪼갤 수 없는 자연의 힘들 = 비바람·자연력"
+antonyms:
+  - word: "compound"
+    note: "둘 이상이 결합해 새 물질이 된 것 — 더 쪼갤 수 없는 element와 반대편"
+  - word: "mixture"
+    note: "섞였을 뿐 각자 그대로인 것"
 ---

@@ -21,4 +21,9 @@ family:
     note: "같은 방식으로 성질에서 뽑아낸 이름"
   - word: "width ← wide"
     note: "같은 방식의 짝"
+antonyms:
+  - word: "cold"
+    note: "뜨거움이 빠져나간 상태 = 차가움"
+  - word: "chill"
+    note: "서늘함"
 ---

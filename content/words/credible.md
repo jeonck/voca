@@ -19,4 +19,9 @@ family:
     note: "믿을 수 없는(in-) = 놀라운"
   - word: "credulous"
     note: "쉽게 믿어버리는"
+antonyms:
+  - word: "incredible"
+    note: "in-(아닌) + credible = 마음을 맡길 수 없는 = 믿기 힘든"
+  - word: "dubious"
+    note: "둘(du-) 사이에서 흔들리는 = 미심쩍은"
 ---

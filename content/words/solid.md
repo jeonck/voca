@@ -20,4 +20,9 @@ family:
     note: "solidus 금화로 급여를 받던 사람 = 군인"
   - word: "solidify"
     note: "단단하게 굳히다 = 응고시키다"
+antonyms:
+  - word: "liquid"
+    note: "흘러(liqu-) 퍼지는 = 액체 — 빈틈없이 꽉 찬 solid와 반대"
+  - word: "gas"
+    note: "형태도 부피도 붙잡히지 않는 = 기체"
 ---

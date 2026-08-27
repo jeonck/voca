@@ -23,5 +23,8 @@ family:
     note: "같은 gen- 뿌리 = 낳다·생성하다"
   - word: "genus"
     note: "종류 = 속(생물 분류)"
+antonyms:
+  - word: "homogeneous mixture"
+    note: "같은(homo-) 종류로 어디를 떠도 똑같은 것 — 같은 gen- 뿌리에 앞머리만 반대"
 bridge: "homogeneous와 heterogeneous는 gen-(종류)이라는 같은 뿌리를 공유하고 앞머리만 다릅니다. 같은 종류냐, 다른 종류냐 — 그 한 글자 차이예요."
 ---

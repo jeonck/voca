@@ -22,4 +22,9 @@ family:
     note: "밖으로(e-) 움직여 나오는 것 = 감정"
   - word: "momentum"
     note: "움직임의 힘 = 운동량"
+antonyms:
+  - word: "insert"
+    note: "안으로(in-) 밀어 넣다 = 삽입하다"
+  - word: "retain"
+    note: "다시(re-) 붙잡아 두다 = 그대로 두다"
 ---

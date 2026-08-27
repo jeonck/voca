@@ -22,4 +22,9 @@ family:
     note: "밖으로(e-) 이끌어내다 = 교육하다"
   - word: "deduce"
     note: "아래로(de-) 이끌어내다 = 추론하다"
+antonyms:
+  - word: "consume"
+    note: "완전히(con-) 다 써버리다 — 앞으로 이끌어내는 produce와 반대"
+  - word: "destroy"
+    note: "만들어진 것을 헐다"
 ---
