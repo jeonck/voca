@@ -26,5 +26,7 @@
       · <a href="https://github.com/{{ .Site.Params.repo }}">GitHub 저장소</a>
     </p>
   </footer>
+  {{ $speak := resources.Get "js/speak.js" | resources.Minify | resources.Fingerprint }}
+  <script src="{{ $speak.RelPermalink }}" integrity="{{ $speak.Data.Integrity }}" defer></script>
 </body>
 </html>

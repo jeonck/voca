@@ -12,7 +12,17 @@
     </span>
     <time class="detail-date" datetime="{{ .Date.Format "2006-01-02" }}">추가 {{ .Date.Format "2006.01.02" }}</time>
   </span>
-  <h1 class="detail-title">{{ .Title }}</h1>
+  {{/* 제목 자체가 발음 재생 버튼이다 — 단어를 누르면 읽어준다. */}}
+  <h1 class="detail-title">
+    <button type="button" class="speak-title" data-speak="{{ .Title }}"
+            aria-label="{{ .Title }} 발음 듣기" title="{{ .Title }} 발음 듣기">
+      <span class="speak-title-word">{{ .Title }}</span>
+      <svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false">
+        <path d="M3 9v6h4l5 5V4L7 9H3z"/>
+        <path d="M16.5 12a4.5 4.5 0 0 0-2.5-4.02v8.04A4.5 4.5 0 0 0 16.5 12z"/>
+      </svg>
+    </button>
+  </h1>
   {{ with .Params.ipa }}<p class="detail-ipa">{{ . }}</p>{{ end }}
   <p class="detail-korean">{{ .Params.korean }}</p>
 

@@ -1,0 +1,8 @@
+{{/* 발음 재생 버튼. 인자: text(읽을 문자열) */}}
+<button type="button" class="speak" data-speak="{{ .text }}"
+        aria-label="{{ .text }} 발음 듣기" title="{{ .text }} 발음 듣기">
+  <svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false">
+    <path d="M3 9v6h4l5 5V4L7 9H3z"/>
+    <path d="M16.5 12a4.5 4.5 0 0 0-2.5-4.02v8.04A4.5 4.5 0 0 0 16.5 12z"/>
+  </svg>
+</button>

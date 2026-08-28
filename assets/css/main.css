@@ -161,6 +161,7 @@ footer.site a { color: var(--ink-soft); }
 }
 
 .card {
+  position: relative;          /* .card-link::after 를 카드 전체에 펼치기 위해 */
   display: flex;
   flex-direction: column;
   padding: 1.1rem 1.2rem 1.2rem;
@@ -203,11 +204,26 @@ footer.site a { color: var(--ink-soft); }
 }
 
 .card-word {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
   font-family: var(--serif);
   font-size: 1.25rem;
   font-weight: 700;
   margin: 0.35rem 0 0.15rem;
   line-height: 1.2;
+}
+
+.card-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* 카드 어디를 눌러도 상세 페이지로 가게 링크를 펼친다. */
+.card-link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
 }
 
 .card-ipa {
@@ -239,6 +255,68 @@ footer.site a { color: var(--ink-soft); }
   padding: 1.5rem 0.2rem;
   text-align: center;
 }
+
+/* ---------- 발음 재생 ---------- */
+
+.speak {
+  position: relative;   /* 펼쳐진 카드 링크 위에 얹는다 */
+  z-index: 1;
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.7rem;
+  height: 1.7rem;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
+}
+
+.speak:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.speak.speaking {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.speak-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  text-align: left;
+}
+
+.speak-title svg {
+  flex: none;
+  font-size: 0.55em;
+  color: var(--ink-soft);
+  opacity: 0.65;
+  transition: color 0.15s, opacity 0.15s;
+}
+
+.speak-title:hover svg { color: var(--accent); opacity: 1; }
+
+.speak-title.speaking svg { color: var(--accent); opacity: 1; }
+
+/* Web Speech API가 없는 브라우저: 버튼은 감추되 제목의 단어는 그대로 남긴다. */
+.no-speech .speak { display: none; }
+.no-speech .speak-title { cursor: default; }
+.no-speech .speak-title svg { display: none; }
 
 /* ---------- pager ---------- */
 

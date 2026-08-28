@@ -23,8 +23,10 @@ layouts/
   _default/terms.html        어근 목록
   partials/word-card.html    카드 한 장
   partials/rich.html         본문 조각 렌더링 (아래 "마크다운 주의점" 참고)
+  partials/speak-button.html 카드의 발음 재생 버튼
 assets/css/main.css          스타일 (Hugo Pipes로 minify + fingerprint)
 assets/js/filter.js          홈 카드 검색/어근 필터
+assets/js/speak.js           단어 발음 재생 (모든 페이지)
 static/CNAME                 커스텀 도메인
 .github/ISSUE_TEMPLATE/word-request.yml   "새 단어 요청" 이슈 폼
 .github/workflows/generate-word.yml       요청된 단어를 자동 생성하는 워크플로
@@ -91,6 +93,21 @@ JS가 **검색·필터를 통과한 집합을 페이지로 나눕니다**. 덕�
 그 결과가 다시 페이징됩니다. 검색어나 어근을 바꾸면 1페이지로 돌아갑니다.
 
 JS가 동작하지 않는 환경에서는 카드 전체가 그대로 보입니다(페이저만 비어 있음).
+
+### 발음 듣기
+
+상세 페이지에서는 **제목의 단어 자체가 재생 버튼**이라 누르면 읽어주고, 카드에서는 단어 옆
+스피커 아이콘을 누릅니다(카드 본문을 누르면 상세 페이지로 이동해야 하므로 분리했습니다).
+
+음성 파일을 만들어 두는 대신 브라우저 내장 **Web Speech API**(`speechSynthesis`)를 씁니다.
+단어가 늘 때마다 오디오를 생성해 커밋할 필요가 없고, 네트워크 요청도 저장소 용량 증가도
+없으며 `rare earth metal` 같은 다어절 표제어도 그대로 읽습니다. 대신 **음성 품질과 목소리는
+기기·브라우저마다 다릅니다**. API가 없는 브라우저에서는 `<html>`에 `no-speech` 클래스가 붙어
+스피커 버튼이 숨겨지고, 제목의 단어는 글자 그대로 남습니다.
+
+카드는 `<a>`가 아니라 `<article>`입니다. 링크 안에 버튼을 넣는 것은 유효하지 않은 HTML이라,
+제목 링크를 `::after`로 카드 전체에 펼쳐(`.card-link`) 어디를 눌러도 이동하게 하고 발음 버튼만
+그 위에 얹었습니다.
 
 ### 반대말
 
