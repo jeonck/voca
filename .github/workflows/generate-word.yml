@@ -128,3 +128,35 @@ jobs:
             6. 이슈 번호가 있으면 `gh issue comment` 로 "PR을 열었습니다: <PR 링크>" 코멘트를 남겨라.
 
             변경 범위는 `content/words/<word>.md` 파일 하나로 제한해라. 다른 파일은 건드리지 마라.
+
+  explain-skip:
+    # generate 는 라벨이 없으면 조건 불일치로 'skipped' 되어 끝난다. 그러면 Actions 로그에
+    # 'skipped' 한 줄만 남고 요청자는 왜 아무 일도 일어나지 않았는지 알 길이 없다.
+    # (실제로 administer 요청이 이 침묵 때문에 네 번이나 재시도됐다.)
+    # 건너뛴 이유를 이슈에 남겨 그 침묵을 메운다.
+    if: >
+      github.event_name == 'issues' &&
+      github.event.action == 'opened' &&
+      !contains(github.event.issue.labels.*.name, 'word-request')
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: Explain that nothing ran
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE: ${{ github.event.issue.number }}
+          REPO: ${{ github.repository }}
+        run: |
+          cat > body.md <<'EOF'
+          이 이슈로는 단어 생성이 **실행되지 않았습니다.**
+
+          자동 생성은 `word-request` 라벨이 붙은 이슈에서만 동작합니다.
+
+          - **단어를 요청하신 거라면** 이 이슈에 `word-request` 라벨을 붙여 주세요. 붙이는 즉시 실행됩니다.
+            (사이트의 "새 단어 요청하기" 버튼으로 올리면 라벨이 자동으로 붙습니다.)
+          - **저장소 멤버가 아니라면** 자동 실행은 소유자·협업자만 가능합니다.
+            공개 저장소에서 토큰 사용량을 보호하기 위한 제한이며, 관리자가 확인 후 처리합니다.
+          - **단어 요청이 아니라면** 이 안내는 무시하셔도 됩니다.
+          EOF
+          gh issue comment "$ISSUE" --repo "$REPO" --body-file body.md
